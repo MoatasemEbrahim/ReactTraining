@@ -3,22 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import SignIn from './pages/signInPage'
-import SignUp from './pages/signUpPage'
-import Profile from './pages/profilePage'
-import Error404 from './pages/404Page'
-import PrivateRoute from './components/privateRouter'
+
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 
 const routing = (
   <Router>
     <Switch>
-      <Route exact path="/" component={App} />
-      <Route path="/signIn" component={SignIn} />
-      <Route path="/signUp" component={SignUp} />
-      <PrivateRoute component={Profile} path="/profile" exact />
-      <Route component={Error404} />
+      <Route path="/" component={App} />
     </Switch>
   </Router>
 )

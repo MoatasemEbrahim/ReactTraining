@@ -1,23 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import './App.css';
+import SignIn from './pages/SignInPage'
+import SignUp from './pages/SignUpPage'
+import Profile from './pages/ProfilePage'
+import Home from './pages/Home'
+import Error404 from './pages/Error404Page'
 
+import PrivateRoute from './components/privateRouter'
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 
 function App() {
+  console.log('here is app')
   return (
-    <div className="text-center container h-100 pt-5">
-		<div className="text-center h-100 mt-5">
-      <div>
-			  <h2>Welcome to our app</h2>
-      </div>
-      <div className="mt-3">
-        <button className="btn mr-4" type="button"><span><Link to="/signin">Login</Link></span> </button>
-        <button className="btn ml-4" type="button"><span><Link to="/signup">Sign up</Link></span> </button>
-      </div>
-		</div>
-	</div>
-  );
+  <Router>
+    <Switch>
+    <Route exact path="/" component={Home} />
+    <Route path="/signIn" component={SignIn} />
+    <Route path="/signUp" component={SignUp} />
+    <PrivateRoute component={Profile} path="/profile" exact />
+    <Route component={Error404} />
+    </Switch>
+  </Router>
+  )
+  
 }
 
 export default App;

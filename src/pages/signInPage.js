@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Input from './input'
+import Input from '../components/input'
 
 class SignIn extends React.Component {
 	constructor(props) {

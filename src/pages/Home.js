@@ -3,9 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 class Home extends React.Component {
-    render() {
-        console.log('here is home')
-        
+    render() {        
         return (
             <div className="text-center container h-100 pt-5">
                 <div className="text-center h-100 mt-5">

@@ -11,7 +11,6 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom'
 
 
 function App() {
-  console.log('here is app')
   return (
   <Router>
     <Switch>

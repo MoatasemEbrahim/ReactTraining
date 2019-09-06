@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 class Profile extends React.Component {
     render() {
-
+console.log("here is profile")
     return (
     <div>
       <div className="text-center container h-100 pt-5">
@@ -12,9 +12,7 @@ class Profile extends React.Component {
             <h2>My Profile</h2>
           </div>
           <div className="mt-3">
-          
-          <button className="btn" type="button"><span><Link to="/">Home</Link></span> </button>
-
+            <button className="btn" type="button"><span><Link to="/">Home</Link></span> </button>
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ class Error404 extends React.Component {
     return (
     <div>
         <h1>Error 404</h1>
-        <Link to="/">Home</Link>
+        <h3><Link to="/">Home</Link></h3>
     </div>
     )
   }
